@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import { Layout, Typography, Space } from "antd";
 
 import {
@@ -10,7 +10,7 @@ import {
   CryptoDetails,
   Navbar,
 } from "./components";
-//import "./App.css";
+import "./App.css";
 
 const App = () => (
   <div className="app">
@@ -20,7 +20,7 @@ const App = () => (
     <div className="main">
       <Layout>
         <div className="routes">
-          <Switch>
+          <Routes>
             <Route exact path="/">
               <Homepage />
             </Route>
@@ -36,7 +36,7 @@ const App = () => (
             <Route exact path="/news">
               <News />
             </Route>
-          </Switch>
+          </Routes>
         </div>
       </Layout>
       <div className="footer">
